@@ -11,59 +11,82 @@
             text-align: center;
             font-style: italic;
             color: #f1e8c7;
-            font-size: 20px;
+            font-size: 18px;
             font-family: Arial;
         }
 
         header {
             background-color: #9ca764;
-            color: #d78289;
             padding: 20px;
-            border: 10px solid #6c762c;
+            border: 8px solid #6c762c;
         }
 
         h1 {
-            margin: 10px;
+            color: #f1e8c7;
         }
 
         h2 {
             background-color: #9ca764;
-            color: #d78289;
-            padding: 30px;
-            border: 10px solid #6c762c;
+            padding: 20px;
+            border: 5px solid #6c762c;
+            margin: 25px;
         }
 
         h3 {
             background-color: #d78289;
-            color: #9ca764;
-            margin: 50px;
-            padding: 30px;
-            border: 10px solid #e4d5b4;
-        }
-
-        gallery img {
-            height: 200px;
-            width: 200px;
-            margin: 10px;
+            padding: 20px;
+            margin: 30px;
             border: 5px solid #e4d5b4;
         }
 
         decoration {
-            font-size: 35px;
+            font-size: 30px;
+            margin: 20px;
         }
 
-        photos img {
-            height: 267px;
+        
+
+        gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .gallery img {
             width: 200px;
+            height: 200px;
+            object-fit: cover;
             border: 5px solid #e4d5b4;
+            border-radius: 10px;
+        }
+
+        /* MY PHOTOS */
+
+        photos img {
+            width: 200px;
+            height: 267px;
+            object-fit: cover;
+            border: 5px solid #e4d5b4;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+       
+
+        iframe {
+            width: 30%;
+            height: 352px;
+            border: none;
+            border-radius: 10px;
             margin: 5px;
         }
 
         footer {
             background-color: #9ca764;
-            padding: 25px;
-            margin-top: 40px;
-            border-top: 10px solid #6c762c;
+            padding: 20px;
+            margin-top: 30px;
+            border-top: 8px solid #6c762c;
         }
 
         footer a {
@@ -72,16 +95,34 @@
             color: #f1e8c7;
             padding: 10px 20px;
             margin: 5px;
-            border-radius: 5px;
+            border-radius: 10px;
             text-decoration: none;
         }
 
         footer a:hover {
-            background-color: #e68a8d;
+            background-color: #6c762c;
         }
 
-        iframe {
-            margin-bottom: 15px;
+        
+
+        @media (max-width: 700px) {
+            .gallery {
+                grid-template-columns: repeat(2, 150px);
+            }
+
+            gallery img {
+                width: 150px;
+                height: 150px;
+            }
+
+            photos img {
+                width: 150px;
+                height: 200px;
+            }
+
+            iframe {
+                width: 90%;
+            }
         }
     </style>
 </head>
@@ -93,13 +134,9 @@
         <p>Welcome to my homepage!</p>
     </header>
 
-    <br>
-
     <div class="decoration">
-        ⋆｡ﾟ🪐｡⋆｡ ﾟ☾ ﾟﾟ✩♬ ₊˚.🎧⋆☾⋆⁺₊✧｡⋆
+        ⋆｡ﾟ🪐｡⋆｡ ﾟ☾ ﾟﾟ✩♬ ₊˚.🎧⋆☾⋆⁺₊✧
     </div>
-
-    <br>
 
     <h2>General Information</h2>
 
@@ -111,20 +148,30 @@
     <h3>Hobbies, Talents, &amp; Skills</h3>
 
     <div class="gallery">
-        Singing
-        <img src="https://i.imgur.com/7sdnThL.jpeg" alt="Singing">
+        <div>
+            Singing
+            <img src="https://i.imgur.com/7sdnThL.jpeg" alt="Singing">
+        </div>
 
-        Listening to Music
-        <img src="https://i.imgur.com/mEK53d4.jpeg" alt="Music">
+        <div>
+            Listening to Music
+            <img src="https://i.imgur.com/mEK53d4.jpeg" alt="Music">
+        </div>
 
-        Cooking
-        <img src="https://i.imgur.com/6LKUlWK.jpeg" alt="Cooking">
+        <div>
+            Cooking
+            <img src="https://i.imgur.com/6LKUlWK.jpeg" alt="Cooking">
+        </div>
 
-        Hanging Out
-        <img src="https://i.imgur.com/rm4Rwzt.jpeg" alt="Hanging out">
+        <div>
+            Hanging Out
+            <img src="https://i.imgur.com/rm4Rwzt.jpeg" alt="Hanging out">
+        </div>
 
-        Writing Music
-        <img src="https://i.imgur.com/ShLwMjW.jpeg" alt="Writing music">
+        <div>
+            Writing Music
+            <img src="https://i.imgur.com/ShLwMjW.jpeg" alt="Writing music">
+        </div>
     </div>
 
     <h3>A Glimpse Of Me</h3>
@@ -133,35 +180,28 @@
         ⋆｡ﾟ🪐｡⋆｡ ﾟ☾ ﾟﾟ✩♬ ₊˚.🎧⋆☾⋆⁺₊✧
     </div>
 
-    <br>
-
     <div class="photos">
         <img src="https://i.imgur.com/y6jNiCq.jpeg" alt="My photo">
         <img src="https://i.imgur.com/DbJGHLh.jpeg" alt="My photo">
         <img src="https://i.imgur.com/7YJlsNs.jpeg" alt="My photo">
     </div>
 
-    <h3>ﾟﾟ✩♬ ₊˚.🎧⋆☾⋆⁺ Cute's Playlist ﾟﾟ✩♬ ₊˚.🎧⋆☾⋆⁺</h3>
+    <h3>ﾟﾟ✩♬ ₊˚.🎧⋆☾⋆⁺ Cute's Playlist ⁺⋆☾⋆🎧</h3>
 
-    <div>
-        <iframe
-            src="https://open.spotify.com/embed/playlist/0YkgibkWqLHImC9WlKYAn2"
-            width="100%" height="352" frameborder="0"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-        </iframe>
+    <iframe
+        src="https://open.spotify.com/embed/playlist/0YkgibkWqLHImC9WlKYAn2"
+        title="Playlist 1">
+    </iframe>
 
-        <iframe
-            src="https://open.spotify.com/embed/playlist/12iE3kioeJkSOW6jerLm2G"
-            width="100%" height="352" frameborder="0"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-        </iframe>
+    <iframe
+        src="https://open.spotify.com/embed/playlist/12iE3kioeJkSOW6jerLm2G"
+        title="Playlist 2">
+    </iframe>
 
-        <iframe
-            src="https://open.spotify.com/embed/playlist/5qxgln8GtK2SoXzCIDVla2"
-            width="100%" height="352" frameborder="0"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-        </iframe>
-    </div>
+    <iframe
+        src="https://open.spotify.com/embed/playlist/5qxgln8GtK2SoXzCIDVla2"
+        title="Playlist 3">
+    </iframe>
 
     <footer>
         <h3>Hyperlinks</h3>
