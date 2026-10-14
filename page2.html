@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +11,7 @@
             font-style: italic;
             color: #f1e8c7;
             font-size: 18px;
-            font-family: Arial;
+            font-family: Arial, sans-serif;
         }
 
         header {
@@ -23,6 +22,7 @@
 
         h1 {
             color: #f1e8c7;
+            margin: 0;
         }
 
         h2 {
@@ -39,18 +39,23 @@
             border: 5px solid #e4d5b4;
         }
 
-        decoration {
+        .decoration {
             font-size: 30px;
             margin: 20px;
         }
 
-        
-
-        gallery {
+        .gallery {
             display: grid;
             grid-template-columns: repeat(3, 200px);
             justify-content: center;
             gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .gallery div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .gallery img {
@@ -59,27 +64,39 @@
             object-fit: cover;
             border: 5px solid #e4d5b4;
             border-radius: 10px;
+            margin-top: 8px;
         }
 
-        /* MY PHOTOS */
+        /* FIXED: Added dot for class selector */
+        .photos {
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
 
-        photos img {
+        .photos img {
             width: 200px;
             height: 267px;
             object-fit: cover;
             border: 5px solid #e4d5b4;
             border-radius: 10px;
-            margin: 10px;
         }
 
-       
+        .playlist-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 0 20px;
+        }
 
         iframe {
-            width: 30%;
+            width: 300px;
             height: 352px;
             border: none;
             border-radius: 10px;
-            margin: 5px;
         }
 
         footer {
@@ -103,25 +120,28 @@
             background-color: #6c762c;
         }
 
-        
-
         @media (max-width: 700px) {
             .gallery {
                 grid-template-columns: repeat(2, 150px);
             }
 
-            gallery img {
+            .gallery img {
                 width: 150px;
                 height: 150px;
             }
 
-            photos img {
+            .photos {
+                grid-template-columns: repeat(2, 150px);
+            }
+
+            .photos img {
                 width: 150px;
                 height: 200px;
             }
 
             iframe {
-                width: 90%;
+                width: 100%;
+                max-width: 300px;
             }
         }
     </style>
@@ -188,20 +208,11 @@
 
     <h3>ﾟﾟ✩♬ ₊˚.🎧⋆☾⋆⁺ Cute's Playlist ⁺⋆☾⋆🎧</h3>
 
-    <iframe
-        src="https://open.spotify.com/embed/playlist/0YkgibkWqLHImC9WlKYAn2"
-        title="Playlist 1">
-    </iframe>
-
-    <iframe
-        src="https://open.spotify.com/embed/playlist/12iE3kioeJkSOW6jerLm2G"
-        title="Playlist 2">
-    </iframe>
-
-    <iframe
-        src="https://open.spotify.com/embed/playlist/5qxgln8GtK2SoXzCIDVla2"
-        title="Playlist 3">
-    </iframe>
+    <div class="playlist-container">
+        <iframe src="https://open.spotify.com/embed/playlist/0YkgibkWqLHImC9WlKYAn2" title="Playlist 1"></iframe>
+        <iframe src="https://open.spotify.com/embed/playlist/12iE3kioeJkSOW6jerLm2G" title="Playlist 2"></iframe>
+        <iframe src="https://open.spotify.com/embed/playlist/5qxgln8GtK2SoXzCIDVla2" title="Playlist 3"></iframe>
+    </div>
 
     <footer>
         <h3>Hyperlinks</h3>
